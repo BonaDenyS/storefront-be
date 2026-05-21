@@ -7,7 +7,7 @@
     "start": "node dist/server.js",
     "watch": "tsc-watch --onSuccess \"node ./dist/server.js\"",
     "build": "tsc",
-    "test": "cross-env ENV=test db-migrate --env test up && cross-env ENV=test jasmine-ts --config=jasmine.json",
+    "test": "cross-env ENV=test db-migrate --env test up && tsc && cross-env ENV=test jasmine --config=jasmine.json",
     "migrate:up": "db-migrate up",
     "migrate:down": "db-migrate down",
     "migrate:reset": "db-migrate reset"
